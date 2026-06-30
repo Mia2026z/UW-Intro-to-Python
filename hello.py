@@ -12,3 +12,4 @@ print(f"My name is {name}, I am {age} years old, my favorite number is {favnum},
 print("""My name is Amelia.
       I love coding.
       Python is fun!""")
+print("My name is Amelia")
