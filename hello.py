@@ -30,3 +30,11 @@ print("""There once was a girl named Lily.
       She was eaten and never seen again.
       But! A kind person saved her from the wolf eventually,
       and they all lived happily ever after!""")
+print("\"It\'s time to get up Mia!\" Mia\'s mom shouted to the slumbering girl upstairs.")
+name="Amelia"
+favcolor="blue"
+favfood="Cherries"
+lucknumb="31" 
+print(f"My name is {name},my favorite color is {favcolor}, my favorite food is {favfood}, and my lucky number is {lucknumb}.")
+user_input=input("What is your name?")
+print("Hello,"+user_input+"!")
