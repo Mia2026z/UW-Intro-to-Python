@@ -1,0 +1,1 @@
+print("Include name at top of word doc and then Email it to mwb4@uw.edu and hbsc@uw.edu and rcsummer@uw.edu by next tuesday")
