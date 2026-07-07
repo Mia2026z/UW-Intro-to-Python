@@ -1,3 +1,14 @@
+def build_reinforced_wall():
+     for position in range(1, 21):
+          if position % 4 == 0:
+               block_type = "COBBLESTOME"
+          else:
+               block_type = "PLANK"
+
+
+
+
+
 def night_patrol(time):
     while(time>0):
         energy=100
@@ -12,8 +23,4 @@ def night_patrol(time):
             print("Shutdown...")
             break
     time-=1
-
-
-        
-
 night_patrol(10)
