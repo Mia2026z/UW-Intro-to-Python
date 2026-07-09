@@ -62,3 +62,6 @@ def say_hello(name):
 say_hello("Emma")
 say_hello("Liam")
 say_hello("Sophia")
+
+user_input = input("Ask me a question: ")
+print("Yes!")
