@@ -30,3 +30,112 @@ def introduce(first_name, last_name, age):
     print("*"*20)
 #Call the function with your own values!
 introduce("Amelia", "Zhang", 12)
+
+
+import turtle
+
+# Create a screen
+screen = turtle.Screen()
+screen.title("Turtle Screen")
+
+# Create the turtle
+t = turtle.Turtle()
+t.speed(5)
+t.color("blue")
+t.shape("turtle")
+
+t.forward(50)
+t.right(90)
+t.forward(50)
+t.right(90)
+t.forward(50)
+t.right(90)
+t.forward(50)
+t.forward(50)
+t.right(90)
+t.forward(50)
+t.right(90)
+t.forward(50)
+t.right(90)
+t.forward(50)
+t.forward(50)
+t.right(90)
+t.forward(50)
+t.right(90)
+t.forward(50)
+t.right(90)
+t.forward(50)
+t.forward(50)
+t.right(90)
+t.forward(50)
+t.right(90)
+t.forward(50)
+t.right(90)
+t.forward(50)
+t.forward(50)
+t.right(90)
+t.forward(50)
+t.right(90)
+t.forward(50)
+t.right(90)
+t.forward(50)
+
+t.forward(100)
+t.right(180)
+t.forward(200)
+t.left(180)
+t.forward(200)
+t.right(90)
+t.forward(100)
+t.right(90)
+t.forward(200)
+t.right(90)
+t.forward(200)
+t.right(90)
+t.forward(200)
+t.right(90)
+t.forward(200)
+
+t.left(90)
+t.forward(100)
+t.left(90)
+t.forward(200)
+t.left(90)
+t.forward(100)
+
+t.right(90)
+t.forward(100)
+t.left(90)
+t.forward(200)
+t.left(90)
+t.forward(100)
+
+t.right(90)
+t.forward(100)
+t.left(90)
+t.forward(200)
+t.left(90)
+t.forward(100)
+
+t.right(90)
+t.forward(100)
+t.left(90)
+t.forward(200)
+t.left(90)
+t.forward(100)
+
+t.forward(100)
+t.left(90)
+t.forward(100)
+
+turtle.goto(0, 0)
+turtle.goto(-100, -100)
+turtle.goto(100, 100)
+turtle.goto
+
+print(turtle.xcor())
+print(turtle.ycor())
+
+# Keep the window open
+screen.mainloop()
+

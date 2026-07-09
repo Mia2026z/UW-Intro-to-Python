@@ -65,3 +65,83 @@ say_hello("Sophia")
 
 user_input = input("Ask me a question: ")
 print("Yes!")
+
+import random
+print(random.randint(1, 100))
+
+import turtle
+
+# Create a screen
+screen = turtle.Screen()
+screen.title("Turtle Screen")
+
+# Create the turtle
+t = turtle.Turtle()
+t.speed(5)
+t.color("blue")
+t.shape("turtle")
+
+# Keep the window open
+screen.mainloop()
+
+# Move the turtle
+t.forward(100)
+t.back()
+t.right(90)
+t.left(90)
+
+t.penup()
+t.pendown()
+t.pensize()
+t.pencolor("")
+
+
+
+# 1st
+t.penup()
+t.forward(50)
+t.right(90)
+t.pendown()
+t.forward(50)
+t.right(90)
+t.forward(100)
+t.right(90)
+t.forward(100)
+t.right(90)
+t.forward(100)
+t.right(90)
+t.forward(50)
+t.right(90)
+t.penup()
+t.forward(50)
+t.right(90)
+t.forward(100)
+t.right(90)
+
+# Second square
+t.pendown()
+t.forward(100)
+t.right(90)
+t.forward(200)
+t.right(90)
+t.forward(200)
+t.right(90)
+t.forward(200)
+t.right(90)
+t.forward(100)
+
+# Third square
+t.penup()
+t.left(90)
+t.forward(50)
+t.right(90)
+t.pendown()
+t.forward(150)
+t.right(90)
+t.forward(300)
+t.right(90)
+t.forward(300)
+t.right(90)
+t.forward(300)
+t.right(90)
+t.forward(150)
