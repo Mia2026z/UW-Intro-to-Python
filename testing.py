@@ -25,3 +25,4 @@ class SportsCar(Car): # Inherits from Car
 
 class Pet:
     def __init__ (self, name, type):
+        self
