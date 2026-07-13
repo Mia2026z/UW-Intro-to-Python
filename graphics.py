@@ -38,7 +38,5 @@ for i in range(72):
     t.circle(120)
     t.right(5)
 
-
 # Keep the window open
 screen.mainloop()
-
