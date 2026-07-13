@@ -2,15 +2,12 @@ menu = ["Croissant", "Latte", "Black coffee", "Espresso", "Muffins", "Avocado to
 playing = True
 day = 1
 
-
 while playing:
     print("Welcome to Python cafe!")
     print("First take a look at the menu please!")
 
-
     if day > 5:
         day = 1
-
 
     def specials(day):
         print("Todays daily special:")
@@ -44,17 +41,22 @@ while playing:
     print("Drinks: ", drinks)
     print("Food: ", food)
 
-
     prices = {
-    "Croissant": 3.50,
-    "Latte": 5.00,
-    "Black Coffee": 3.00,
-    "Espresso": 3.00,
-    "Muffins": 3.50,
-    "Avocado Toast": 8.50,
-    "Matcha": 5.50,
-    "Cappuccino": 5.00,
-    }
+        "Croissant": 3.50,
+        "Latte": 5.00,
+        "Black Coffee": 3.00,
+        "Espresso": 3.00,
+        "Muffins": 3.50,
+        "Avocado Toast": 8.50,
+        "Matcha": 5.50,
+        "Cappuccino": 5.00,
+        "Cake Pop": 2.50,
+        "Iced Tea": 4.00,
+        "Lemonade": 4.00,
+        "Lemon Iced Toast": 7.50,
+        "Hot Chocolate": 4.50
+        }
+
 
     # Function to find the price of an item
     def get_price(item):
