@@ -4,6 +4,7 @@ print("Welcome to Python cafe!")
 print("First take a look at the menu please!")
 
 day = 1
+
 def specials(day):
     print("Todays daily special:")
     if day == 1:
@@ -17,10 +18,9 @@ def specials(day):
     else:
         print("Hot chocolate : $4.50")
         
-
-if day >= 5:
+if day > 5:
     day = 1
-print(specials(day))
+specials(day)
 
 print(menu)
 

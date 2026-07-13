@@ -71,6 +71,7 @@ if(user_choice1 == "cave"):
                         print("The helicopter sees you, and you are rescued.")
                         print(wow.upper(),"! YOU HAVE ESCAPED AND SURVIVED THE ISLAND!")
                         print(bye.lower())
+                       
                     elif user_choice6 == "raft":
                         print("You build a raft and set sail from the island.")
                         print("Just as you're losing hope, you suddenly see land.")
@@ -250,4 +251,87 @@ elif(user_choice1 == "palm trees"):
     print("Oh no, spotted by giant spider.")
     print("You hide and escape being eaten.")
     print("You go back to the place you woke up, it is now your camp.")
-    user_choice3 = input("The sky is now dark, you can either make a fire, or gather berries. Enter 'fire' or 'berries': ")
+    user_choice8 = input("The sky is now dark, you can either make a fire, or gather berries. Enter 'fire' or 'berries': ")
+    if user_choice8 == "fire":
+        print("You make a fire with your matches.")
+        print("You decide to sleep for the night.")
+        user_choice9 = input("You can now either explore or sleep more. Enter 'explore' or 'sleep': ")
+        if user_choice9 == "explore":
+            print("You go out and explore.")
+            print("You find a rusty knife while exploring.")
+            print("You go back to camp.")
+            user_choice12 = input("You can either go explore near the water, or sleep at camp. Enter 'water' or 'sleep': ")
+            if user_choice12 == "water":
+                print("You go to the water and rinse off your wounds.")
+                print("You find fireworks which could save you.")
+                print("You think it's time to escape.")
+                user_choice15 = input("You will now shoot the firework into the sky in hopes of someone seeing it. Are you ready? Enter yes/no: ")
+                if user_choice15 == "yes" or "y" or "yea" or "yeah" or "Yes" or "Yep" or "yep":
+                    print("You set off the firework.")
+                    print("A helicopter sees you.")
+                    print(wow.upper(),"! YOU HAVE SURVIVED AND ESCAPED THE ISLAND!")
+                else:
+                    print("You don't set off the firework, you starve to death on the island.")
+                    print("You failed to escape the island, try again next time!")
+            if user_choice12 == "sleep":
+                print("You start sleeping.")
+                print("You wake up finding everything burning with fire.")
+                print("You nearly escape burning yourself.")
+            user_choice16= input("You now have two choices, go to the water or look for other items. Enter 'water' or 'items': ")
+            if user_choice16 == "water":
+                print("You go to the water and rinse off your wounds.")
+                print("You find fireworks which could save you.")
+                print("You think it's time to escape.")
+                user_choice17 = input("You will now shoot the firework into the sky in hopes of someone seeing it. Are you ready? Enter yes/no: ")
+                if user_choice17 == "yes" or "y" or "yea" or "yeah" or "Yes" or "Yep" or "yep":
+                    print("You set off the firework.")
+                    print("A helicopter sees you.")
+                    print(wow.upper(),"! YOU HAVE SURVIVED AND ESCAPED THE ISLAND!")
+                else:
+                    print("You don't set off the firework, you starve to death on the island.")
+                    print("You failed to escape the island, try again next time!")
+
+        elif user_choice9 == "sleep":
+            print("You keep sleeping.")
+            print("You wake up finding everything burning with fire.")
+            print("You nearly escape burning yourself.")
+            user_choice13 = input("You now have two choices, go to the water or look for other items. Enter 'water' or 'items': ")
+            if user_choice13 == "water":
+                print("You go to the water and rinse off your wounds.")
+                print("You find fireworks which could save you.")
+                print("You think it's time to escape.")
+                user_choice14 = input("You will now shoot the firework into the sky in hopes of someone seeing it. Are you ready? Enter yes/no: ")
+                if user_choice14 == "yes" or "y" or "yea" or "yeah" or "Yes" or "Yep" or "yep":
+                    print("You set off the firework.")
+                    print("A helicopter sees you.")
+                    print(wow.upper(),"! YOU HAVE SURVIVED AND ESCAPED THE ISLAND!")
+                else:
+                    print("You don't set off the firework, you starve to death on the island.")
+                    print("You failed to escape the island, try again next time!")
+            elif user_choice13 == "items":
+                print("You don't find any more items.")
+                print("You don't have anymore energy to walk.")
+                print("You collapse on the cold wet jungle floor.")
+                print("You failed to escape the island, it's okay, try again next time!")
+    elif user_choice8 == "berries":
+        print("You decide to go pick berries.")
+        print("You encounter bears.")
+        print("You are now injured and lose all of your supplies.")
+        user_choice10 = input("You can now go back to camp or go in the water. Enter 'camp' or 'water': ")
+        if user_choice10 == "camp":
+            print("You go back to camp.")
+            print("You find that your camp is already taken over by snakes.")
+            print("You are bitten, you die.")
+            print("You failed to escape the island. It's okay, try again next time!")
+        elif user_choice10 == "water":
+            print("You go to the water and rinse off your wounds.")
+            print("You find fireworks which could save you.")
+            print("You think it's time to escape.")
+            user_choice11 = input("You will now shoot the firework into the sky in hopes of someone seeing it. Are you ready? Enter yes/no: ")
+            if user_choice11 == "yes" or "y" or "yea" or "yeah" or "Yes" or "Yep" or "yep":
+                print("You set off the firework.")
+                print("A helicopter sees you.")
+                print(wow.upper(),"! YOU HAVE SURVIVED AND ESCAPED THE ISLAND!")
+            else:
+                print("You don't set off the firework, you starve to death on the island.")
+                print("You failed to escape the island, try again next time!")
