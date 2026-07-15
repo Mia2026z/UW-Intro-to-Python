@@ -71,7 +71,6 @@ if(user_choice1 == "cave"):
                         print("The helicopter sees you, and you are rescued.")
                         print(wow.upper(),"! YOU HAVE ESCAPED AND SURVIVED THE ISLAND!")
                         print(bye.lower())
-                       
                     elif user_choice6 == "raft":
                         print("You build a raft and set sail from the island.")
                         print("Just as you're losing hope, you suddenly see land.")
