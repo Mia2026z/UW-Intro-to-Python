@@ -188,4 +188,30 @@ def temperature_cal(f):
     return c
 
 print(f"{f} Farenheit is equal to {temperature_cal(f)} Celsius!")
+
+
+import pygame
+
+running = True
+
+while running == True:
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            running = False
     
+
+screen = pygame.display.set_mode((400, 400))
+# Fill the screen with red
+screen.fill((255, 0, 0))
+pygame.display.update()
+pygame.time.wait(1000)
+
+# Fill the screen with green
+screen.fill((0, 255, 0))
+pygame.display.update()
+pygame.time.wait(1000)
+
+# Fill the screen with blue
+screen.fill((0, 0, 255))
+pygame.display.update()
+pygame.time.wait(1000)

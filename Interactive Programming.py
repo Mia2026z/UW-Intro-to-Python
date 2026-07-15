@@ -67,3 +67,9 @@ print(f"""Here is what I gathered:"
 user_choice=input("Is this your information?")
 print("Thank you for your free information! :P ")
       
+running = True
+
+while running == True:
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            running = False
