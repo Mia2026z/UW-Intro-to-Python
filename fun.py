@@ -18,7 +18,9 @@ screen.fill((0, 0, 255))
 pygame.display.update()
 pygame.time.wait(100000)
 
-while running:
-    for event in pygame.event.get():
-        if event.type == pygame.event.QUIT():
-            running = False
+pygame.quit()
+
+# while running:
+#     for event in pygame.event.get():
+#         if event.type == pygame.event.QUIT():
+#             running = False
