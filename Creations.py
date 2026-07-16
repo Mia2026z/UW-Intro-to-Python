@@ -1,7 +1,5 @@
 dino = ""
 # Dinosuar
-if dino:
-
     import pygame
     pygame.init()
 

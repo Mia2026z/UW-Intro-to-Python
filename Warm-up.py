@@ -1,16 +1,25 @@
-name = "Amelia"
+import statistics
 
-print(name.upper()) # Output: AMELIA
+numbers = [9, 11, 9, 13, 8]
 
-print(name.lower()) # Output: amelia
+mean = statistics.mean(numbers)
 
-sentence = "I love math"
+print("The mean of this data set is:", mean, "inches")
 
-new_sentence = sentence.replace("math", "science")
+median = statistics.median(numbers)
+print("The median of this data set is:", median, "inches")
 
-print(new_sentence.title()) # Output: I Love Science
+mode = statistics.mode(numbers)
+print("The mode of this data set is:", mode, "inches")
 
-word = "book"
 
-print(word[::-1]) # Output koob
+class_data = {"Math": 16, 
+              "Science": 8, 
+              "English": 2, 
+              "History": 1, 
+              "Economics": 1, 
+              "Music Theory": 2
+              }
 
+mode_class = statistics.mode(class_data)
+print("Mode is:", mode_class)

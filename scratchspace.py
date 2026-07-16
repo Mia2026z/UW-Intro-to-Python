@@ -215,3 +215,27 @@ pygame.time.wait(1000)
 screen.fill((0, 0, 255))
 pygame.display.update()
 pygame.time.wait(1000)
+
+
+import matplotlib.pyplot as plt
+import statistics
+
+days = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]
+mph = [8, 7, 7, 6, 7, 6, 7]
+
+plt.plot(days, mph, marker = 'o', color = 'black', linestyle = '-')
+
+plt.title("Weekly wind gusts in Washington")
+plt.xlabel("Days of the week")
+plt.ylabel("Gusts (mph)")
+
+plt.ylim(0, 10)
+plt.yticks(range(0, 11))
+
+plt.grid(True)
+
+mean_value = statistics.mean(mph)
+average = round(mean_value)
+print("The average wind gust for a week in Washington is: ", average, "mph")
+
+plt.show()
