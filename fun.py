@@ -26,8 +26,8 @@ ball_radius = 10
 ball_x = WIDTH // 2
 ball_y = HEIGHT // 2
 
-speed_x = 3
-speed_y = 2
+speed_x = 5
+speed_y = 4
 
 bricks = [
         pygame.Rect(0, 0, 800, 25),
@@ -99,7 +99,7 @@ while True:
 
     screen.fill((0, 0, 0))
 
-    pygame.draw.circle(screen, (0, 255, 255), (int(ball_x), int(ball_y)), ball_radius)
+    pygame.draw.circle(screen, (255, 255, 0), (int(ball_x), int(ball_y)), ball_radius)
 
     pygame.draw.rect(screen, (255, 255, 255), rect)
 
