@@ -39,9 +39,10 @@ elif (not has_gear) or (has_armor):
     print("You need a weapon or armor to fight!")
 elif health < 50:
     print("Heal up before the fight!")
-elif:
+elif health == 50:
     print("You're ready for battle!!")
-else:(has_magic_ring)
+else:
+    (has_magic_ring)
     print("The ring grants you access!")
 
 
@@ -68,6 +69,8 @@ user_choice=input("Is this your information?")
 print("Thank you for your free information! :P ")
       
 running = True
+
+import pygame
 
 while running == True:
     for event in pygame.event.get():

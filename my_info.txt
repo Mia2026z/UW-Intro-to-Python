@@ -1,2 +1,49 @@
-Hi! My name is Amelia and my favorite food is pizza.
-My favorite colors are blue and pink.
+
+if_font = pygame.font.Font(None, 30)
+
+
+if ball.bottom >= HEIGHT:
+        SCREEN.fill("black")
+        game_over_surface = FONT.render("GAME OVER", True, "white")
+        text_rect = game_over_surface.get_rect(center = (WIDTH//2, HEIGHT//2 - 100))
+        SCREEN.blit(game_over_surface, text_rect)
+
+        continue_game = Continue_font.render("         Would you like to play again or quit? \n(PRESS ENTER TO TRY AGAIN) or (Q TO QUIT)", True, "red")
+        placement = continue_game.get_rect(center = (WIDTH // 2, HEIGHT // 2))
+        SCREEN.blit(continue_game, placement)
+
+        player_choice = input("").capitalize
+
+        pygame.display.update()
+
+
+        if_game = if_font.render(player_choice, True, "blue")
+        if_placement = if_game.get_rect(center = (WIDTH // 2, HEIGHT // 2 + 50))
+        SCREEN.blit(if_game, if_placement)
+
+
+        if player_choice == "Q":
+            break
+
+        elif player_choice == "":
+            test = if_font.render("TESTING", True, "red")
+            place = test.get_rect(center = (WIDTH // 2, HEIGHT // 2 + 100))
+            SCREEN.blit(test, place)
+            pygame.display.update()
+
+
+
+
+pygame.draw.rect(SCREEN, "white", player_paddle)
+        pygame.draw.circle(SCREEN, "white", (ball.x + 10, ball.y + 10), 10)
+
+        if ball.bottom >= HEIGHT:
+
+            SCREEN.fill("black")
+            game_over_surface = font.render("GAME OVER", True, "white")
+            text_rect = game_over_surface.get_rect(center = (WIDTH//2, HEIGHT//2 - 100))
+            SCREEN.blit(game_over_surface, text_rect)
+
+            continue_game = continue_font.render("         Would you like to play again or quit? \n(PRESS ENTER TO TRY AGAIN) or (Q TO QUIT)", True, "red")
+            placement = continue_game.get_rect(center = (WIDTH // 2, HEIGHT // 2))
+            SCREEN.blit(continue_game, placement)
