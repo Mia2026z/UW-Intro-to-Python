@@ -57,7 +57,6 @@ while True:
                     blocks = [pygame.Rect(100, 150, 75, 75),
                                 pygame.Rect(180, 150, 75, 75),
                                 pygame.Rect(260, 150, 75, 75),
-                                pygame.Rect(400, 150, 75, 75),
                                 pygame.Rect(480, 150, 75, 75),
                                 pygame.Rect(560, 150, 75, 75),
                                 pygame.Rect(640, 150, 75, 75)]
@@ -65,7 +64,7 @@ while True:
                 # Level Medium: Blocks + speed
                 elif event.key == pygame.K_m:
                     ball.x, ball.y = WIDTH//2 - 10, 50
-                    x_speed, y_speed = 4, 4
+                    x_speed, y_speed = 5, 5
                     player_paddle = pygame.Rect(WIDTH//2 - 37, 425, 75, 15)
                     blocks_active = True
                     blocks = [pygame.Rect(100, 150, 75, 75),
@@ -82,8 +81,7 @@ while True:
                     x_speed, y_speed = 3, 3
                     player_paddle = pygame.Rect(WIDTH//2 - 37, 425, 40, 15)
                     blocks_active = True
-                    blocks = [pygame.Rect(100, 150, 75, 75),
-                                pygame.Rect(180, 150, 75, 75),
+                    blocks = [pygame.Rect(180, 150, 75, 75),
                                 pygame.Rect(260, 150, 75, 75),
                                 pygame.Rect(400, 150, 75, 75),
                                 pygame.Rect(480, 150, 75, 75),
@@ -104,8 +102,11 @@ while True:
                                 pygame.Rect(560, 150, 75, 75),
                                 pygame.Rect(640, 150, 75, 75)]
                     game_state = "PLAYING"
-
-            elif game_state == "GAME_OVER":
+                # Quitting the game
+                elif event.key == pygame.K_q:
+                    pygame.quit()
+                    sys.exit()
+            elif game_state == "GAME_OVER" or game_state == "VICTORY":
                 if event.key == pygame.K_RETURN:
                     bounce = 0
                     game_state = "START"
@@ -138,6 +139,9 @@ while True:
             if hit_index != -1:
                 y_speed *= -1
                 blocks.pop(hit_index)
+
+            if len(blocks) == 0:
+                game_state = "VICTORY"
 
         if ball.right >= WIDTH:
             ball.right = WIDTH
@@ -218,6 +222,16 @@ while True:
         SCREEN.blit(line1, rect1)
         SCREEN.blit(line2, rect2)
 
+    elif game_state == "VICTORY":
+        victory1 = font.render("VICTORY!", True, "yellow")
+        victory2 = my_font.render("YOU DESTROYED ALL THE BLOCKS!", True, "yellow")
+        victory3 = continue_font.render("Press (ENTER) to try again or (Q to QUIT)", True, "red")
+        victory1_rect = victory1.get_rect(center=(WIDTH//2, HEIGHT//2 - 125))
+        victory2_rect = victory2.get_rect(center=(WIDTH//2, HEIGHT//2 - 75))
+        victory3_rect = victory3.get_rect(center=(WIDTH//2, HEIGHT//2 + 100))
+        SCREEN.blit(victory1, victory1_rect)
+        SCREEN.blit(victory2, victory2_rect)
+        SCREEN.blit(victory3, victory3_rect)
 
     pygame.display.update()
     CLOCK.tick(60)
