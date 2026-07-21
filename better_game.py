@@ -3,6 +3,7 @@ import sys
 
 pygame.init()
 
+# Part of scoring (keeps track of how many bounces player got)
 bounce = 0
 
 # Blocks
@@ -225,7 +226,7 @@ while True:
     elif game_state == "VICTORY":
         victory1 = font.render("VICTORY!", True, "yellow")
         victory2 = my_font.render("YOU DESTROYED ALL THE BLOCKS!", True, "yellow")
-        victory3 = continue_font.render("Press (ENTER) to try again or (Q to QUIT)", True, "red")
+        victory3 = continue_font.render("Press (ENTER) to go back to menu or (Q to QUIT)", True, "red")
         victory1_rect = victory1.get_rect(center=(WIDTH//2, HEIGHT//2 - 125))
         victory2_rect = victory2.get_rect(center=(WIDTH//2, HEIGHT//2 - 75))
         victory3_rect = victory3.get_rect(center=(WIDTH//2, HEIGHT//2 + 100))
