@@ -238,7 +238,7 @@ while True:
 
         # Message after player loses
         line1 = continue_font.render("Would you like to play again or quit?", True, "red")
-        line2 = continue_font.render("Press (SPACE) to try again | Press (ENTER) to go back to menu | (Q TO QUIT)", True, "red")
+        line2 = continue_font.render("Press (ENTER) to go back to menu | (Q TO QUIT)", True, "red")
         
         rect1 = line1.get_rect(center=(WIDTH//2, HEIGHT//2 +75))
         rect2 = line2.get_rect(center=(WIDTH//2, HEIGHT//2 + 100))
@@ -250,7 +250,7 @@ while True:
     elif game_state == "VICTORY":
         victory1 = font.render("VICTORY!", True, "yellow")
         victory2 = my_font.render("YOU DESTROYED ALL THE BLOCKS!", True, "yellow")
-        victory3 = continue_font.render("Press (ENTER) to go back to menu or (Q to QUIT)", True, "red")
+        victory3 = continue_font.render("Press (ENTER) to go back to menu or (Q) to QUIT", True, "red")
         victory1_rect = victory1.get_rect(center=(WIDTH//2, HEIGHT//2 - 125))
         victory2_rect = victory2.get_rect(center=(WIDTH//2, HEIGHT//2 - 75))
         victory3_rect = victory3.get_rect(center=(WIDTH//2, HEIGHT//2 + 100))
