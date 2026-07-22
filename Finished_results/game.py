@@ -203,7 +203,7 @@ while True:
         line9 = my_font.render("Hard level --> enter (h)", True, "red")
         line10 = my_font.render("Extreme level --> enter (x)", True, "purple")
         line11 = my_font.render("Level Impossible --> enter (i)", True, "gold")
-        line12 = continue_font.render("Q to quit --> enter (q)", True, "grey")
+        line12 = continue_font.render("Enter (q) to quit", True, "grey")
 
         rect3 = line3.get_rect(center = (WIDTH//2, HEIGHT//2 - 240))
         rect4 = line4.get_rect(center=(WIDTH//2, HEIGHT//2 - 190))
@@ -264,10 +264,10 @@ while True:
     # When player wins
     elif game_state == "VICTORY":
 
-        SCREEN.fill("Gold")
+        SCREEN.fill("White")
 
         victory1 = font.render("VICTORY!", True, "blue")
-        victory2 = my_font.render("YOU DESTROYED ALL THE BLOCKS!", True, "yellow")
+        victory2 = my_font.render("YOU DESTROYED ALL THE BLOCKS!", True, "gold")
         victory3 = continue_font.render("Press (ENTER) to go back to menu or (Q) to QUIT", True, "red")
         victory1_rect = victory1.get_rect(center=(WIDTH//2, HEIGHT//2 - 125))
         victory2_rect = victory2.get_rect(center=(WIDTH//2, HEIGHT//2 - 75))
