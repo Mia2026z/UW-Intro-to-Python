@@ -113,6 +113,18 @@ while True:
                                 pygame.Rect(640, 150, 75, 75)]
                     game_state = "PLAYING"
 
+                # Level Impossible: Blocks + Speed + Platform tiny
+                elif event.key == pygame.K_i:
+                                    ball.x, ball.y = WIDTH//2 - 10, 50
+                                    x_speed, y_speed = 8, 8
+                                    player_paddle = pygame.Rect(WIDTH//2 - 37, 425, 45, 15)
+                                    blocks_active = True
+                                    blocks = [pygame.Rect(100, 150, 75, 75),
+                                                pygame.Rect(260, 150, 75, 75),
+                                                pygame.Rect(400, 150, 75, 75),
+                                                pygame.Rect(480, 150, 75, 75),
+                                                pygame.Rect(640, 150, 75, 75)]
+                                    game_state = "PLAYING"
                 # Quitting the game
                 elif event.key == pygame.K_q:
                     pygame.quit()
@@ -123,78 +135,6 @@ while True:
                 if event.key == pygame.K_SPACE:
                     bounce = 0
                     game_state = "PLAYING"
-
-                    # Training Level
-                    if event.key == pygame.K_t:
-                        ball.x, ball.y = WIDTH//2 - 10, 50
-                        x_speed, y_speed = 4, 4
-                        player_paddle = pygame.Rect(WIDTH//2 - 37, 425, 75, 15)
-                        blocks_active = False
-                        game_state = "PLAYING"
-    
-                    # Level Easy: Blocks
-                    elif event.key == pygame.K_e:
-                        ball.x, ball.y = WIDTH//2 - 10, 50
-                        x_speed, y_speed = 3, 3
-                        player_paddle = pygame.Rect(WIDTH//2 - 37, 425, 75, 15)
-                        blocks_active = True
-                        blocks = [pygame.Rect(100, 150, 75, 75),
-                                    pygame.Rect(180, 150, 75, 75),
-                                    pygame.Rect(260, 150, 75, 75),
-                                    pygame.Rect(480, 150, 75, 75),
-                                    pygame.Rect(560, 150, 75, 75),
-                                    pygame.Rect(640, 150, 75, 75)]
-                        game_state = "PLAYING"
-    
-                    # Level Medium: Blocks + speed
-                    elif event.key == pygame.K_m:
-                        ball.x, ball.y = WIDTH//2 - 10, 50
-                        x_speed, y_speed = 5, 5
-                        player_paddle = pygame.Rect(WIDTH//2 - 37, 425, 75, 15)
-                        blocks_active = True
-                        blocks = [pygame.Rect(100, 150, 75, 75),
-                                    pygame.Rect(180, 150, 75, 75),
-                                    pygame.Rect(260, 150, 75, 75),
-                                    pygame.Rect(400, 150, 75, 75),
-                                    pygame.Rect(480, 150, 75, 75),
-                                    pygame.Rect(560, 150, 75, 75),
-                                    pygame.Rect(640, 150, 75, 75)]
-                        game_state = "PLAYING"
-    
-                    # Level Hard: Platform small + blocks
-                    elif event.key == pygame.K_h:
-                        ball.x, ball.y = WIDTH//2 - 10, 50
-                        x_speed, y_speed = 3, 3
-                        player_paddle = pygame.Rect(WIDTH//2 - 37, 425, 40, 15)
-                        blocks_active = True
-                        blocks = [pygame.Rect(180, 150, 75, 75),
-                                    pygame.Rect(260, 150, 75, 75),
-                                    pygame.Rect(400, 150, 75, 75),
-                                    pygame.Rect(480, 150, 75, 75),
-                                    pygame.Rect(560, 150, 75, 75),
-                                    pygame.Rect(640, 150, 75, 75)]
-                        game_state = "PLAYING"
-    
-                    # Level Extreme: Blocks + speed + platform small
-                    elif event.key == pygame.K_x:
-                        ball.x, ball.y = WIDTH//2 - 10, 50
-                        x_speed, y_speed = 6, 6
-                        player_paddle = pygame.Rect(WIDTH//2 - 37, 425, 40, 15)
-                        blocks_active = True
-                        blocks = [pygame.Rect(100, 150, 75, 75),
-                                    pygame.Rect(180, 150, 75, 75),
-                                    pygame.Rect(260, 150, 75, 75),
-                                    pygame.Rect(400, 150, 75, 75),
-                                    pygame.Rect(480, 150, 75, 75),
-                                    pygame.Rect(560, 150, 75, 75),
-                                    pygame.Rect(640, 150, 75, 75)]
-                        game_state = "PLAYING"
-    
-                    # Quitting the game
-                    elif event.key == pygame.K_q:
-                        pygame.quit()
-                        sys.exit()
-
                 elif event.key == pygame.K_RETURN:
                     bounce = 0
                     game_state = "START"
@@ -262,17 +202,19 @@ while True:
         line8 = my_font.render("Medium level --> enter (m)", True, "orange")
         line9 = my_font.render("Hard level --> enter (h)", True, "red")
         line10 = my_font.render("Extreme level --> enter (x)", True, "purple")
-        line11 = continue_font.render("Q to quit --> enter (q)", True, "grey")
+        line11 = my_font.render("Level Impossible --> enter (i)", True, "gold")
+        line12 = continue_font.render("Q to quit --> enter (q)", True, "grey")
 
         rect3 = line3.get_rect(center = (WIDTH//2, HEIGHT//2 - 240))
         rect4 = line4.get_rect(center=(WIDTH//2, HEIGHT//2 - 190))
         rect5 = line5.get_rect(center=(WIDTH//2, HEIGHT//2 - 115))
-        rect6 = line6.get_rect(center=(WIDTH//2 , HEIGHT//2 - 25))
-        rect7 = line7.get_rect(center=(WIDTH//2 - 20, HEIGHT//2 + 15))
-        rect8 = line8.get_rect(center=(WIDTH//2 + 10, HEIGHT//2 + 55))
-        rect9 = line9.get_rect(center=(WIDTH//2 - 15, HEIGHT//2 + 95))
-        rect10 = line10.get_rect(center=(WIDTH//2 - 15, HEIGHT//2 +140))
-        rect11 = line11.get_rect(center=(WIDTH//2 - 15, HEIGHT//2 +225))
+        rect6 = line6.get_rect(center=(WIDTH//2 , HEIGHT//2 - 50))
+        rect7 = line7.get_rect(center=(WIDTH//2 - 20, HEIGHT//2 - 10))
+        rect8 = line8.get_rect(center=(WIDTH//2 + 10, HEIGHT//2 + 30))
+        rect9 = line9.get_rect(center=(WIDTH//2 - 15, HEIGHT//2 + 70))
+        rect10 = line10.get_rect(center=(WIDTH//2 + 10, HEIGHT//2 +115))
+        rect11 = line11.get_rect(center=(WIDTH//2 + 27, HEIGHT//2 +155))
+        rect12 = line12.get_rect(center=(WIDTH//2, HEIGHT//2 + 225))
 
         SCREEN.blit(line3, rect3)
         SCREEN.blit(line4, rect4)        
@@ -283,6 +225,7 @@ while True:
         SCREEN.blit(line9, rect9)
         SCREEN.blit(line10, rect10)
         SCREEN.blit(line11, rect11)
+        SCREEN.blit(line12, rect12)
 
     # When player is playing the game
     elif game_state == "PLAYING":
@@ -310,7 +253,7 @@ while True:
 
         # Message after player loses
         line1 = continue_font.render("Would you like to play again or quit?", True, "red")
-        line2 = continue_font.render("Press (SPACE) to try again | Press (ENTER) to go back to menu | (Q TO QUIT)", True, "red")
+        line2 = continue_font.render("Press (ENTER) to go back to menu | (Q TO QUIT)", True, "red")
         
         rect1 = line1.get_rect(center=(WIDTH//2, HEIGHT//2 +75))
         rect2 = line2.get_rect(center=(WIDTH//2, HEIGHT//2 + 100))
@@ -320,9 +263,12 @@ while True:
 
     # When player wins
     elif game_state == "VICTORY":
-        victory1 = font.render("VICTORY!", True, "yellow")
+
+        SCREEN.fill("Gold")
+
+        victory1 = font.render("VICTORY!", True, "blue")
         victory2 = my_font.render("YOU DESTROYED ALL THE BLOCKS!", True, "yellow")
-        victory3 = continue_font.render("Press (ENTER) to go back to menu or (Q to QUIT)", True, "red")
+        victory3 = continue_font.render("Press (ENTER) to go back to menu or (Q) to QUIT", True, "red")
         victory1_rect = victory1.get_rect(center=(WIDTH//2, HEIGHT//2 - 125))
         victory2_rect = victory2.get_rect(center=(WIDTH//2, HEIGHT//2 - 75))
         victory3_rect = victory3.get_rect(center=(WIDTH//2, HEIGHT//2 + 100))
